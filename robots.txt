@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://expodesk.app/sitemap.xml
