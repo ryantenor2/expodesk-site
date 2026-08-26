@@ -87,6 +87,53 @@
   .typing::after{content:"▍"; animation:blink 1s infinite; color:var(--brand)}
   @keyframes blink{50%{opacity:0}}
 
+  /* app screens gallery */
+  .shots{display:grid; grid-template-columns:repeat(3,1fr); gap:18px; align-items:start}
+  @media(max-width:860px){ .shots{grid-template-columns:1fr; max-width:360px; margin:0 auto} }
+  .shot-p{background:#000; border-radius:26px; padding:8px; border:1px solid #2c2c40;
+      box-shadow:0 18px 50px rgba(0,0,0,.45)}
+  .shot-s{background:#101018; border-radius:20px; overflow:hidden; font-size:11.5px; padding-bottom:12px}
+  .shot-cap{text-align:center; color:var(--muted); font-size:13px; margin-top:12px}
+  .sh-top{display:flex; align-items:center; justify-content:space-between; padding:11px 12px;
+      border-bottom:1px solid var(--line)}
+  .sh-logo{font-family:var(--display); font-weight:800; font-size:12px}
+  .sh-logo b{color:var(--brand)}
+  .sh-event{margin:10px 12px; border-radius:10px; padding:9px 11px; font-size:10.5px;
+      background:linear-gradient(120deg, rgba(99,91,255,.25), rgba(99,91,255,.08));
+      border:1px solid rgba(99,91,255,.3); display:flex; justify-content:space-between; align-items:center}
+  .sh-tiles{display:grid; grid-template-columns:1fr 1fr; gap:8px; margin:0 12px 10px}
+  .sh-tile{background:var(--panel-2); border:1px solid var(--line); border-radius:11px; padding:9px 10px}
+  .sh-tile .n{font-family:var(--display); font-weight:800; font-size:19px}
+  .sh-tile .l{color:var(--muted); font-size:9.5px; letter-spacing:.05em; text-transform:uppercase}
+  .sh-h{margin:8px 12px 6px; font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--muted)}
+  .sh-row{display:flex; align-items:center; gap:8px; margin:0 12px 7px}
+  .sh-medal{flex:0 0 16px; text-align:center}
+  .sh-name{font-weight:600; font-size:11px; flex:1; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap}
+  .sh-cnt{color:var(--ink-2); font-size:10.5px}
+  .sh-bar{height:3px; border-radius:2px; background:var(--line); margin:3px 12px 8px 36px; overflow:hidden}
+  .sh-bar i{display:block; height:100%; background:var(--brand); border-radius:2px}
+  .sh-face{width:30px; height:30px; border-radius:9px; display:grid; place-items:center; font-weight:700;
+      color:#fff; font-size:11px; flex:0 0 30px}
+  .sh-pill{font-size:8px; font-weight:700; letter-spacing:.05em; padding:2px 7px; border-radius:10px}
+  .sh-hot{background:rgba(255,90,90,.18); color:#ff7a7a}
+  .sh-warm{background:rgba(255,209,102,.15); color:var(--lanyard)}
+  .sh-cold{background:rgba(120,160,255,.14); color:#8fb0ff}
+  .sh-acts{display:grid; grid-template-columns:1fr 1fr; gap:6px; margin:10px 12px}
+  .sh-act{border-radius:8px; padding:7px 0; text-align:center; font-size:9.5px; font-weight:600;
+      background:var(--panel-2); border:1px solid var(--line)}
+  .sh-act.wa{background:#128C4B; border-color:#128C4B}
+  .sh-act.tg{background:#2AABEE; border-color:#2AABEE}
+  .sh-brief{margin:10px 12px; padding:9px 10px; border-radius:10px; background:var(--brand-wash);
+      border:1px solid rgba(99,91,255,.25); color:var(--ink-2); font-size:10px; line-height:1.55}
+  .sh-brief b{color:var(--ink)}
+  .sh-voice{display:flex; align-items:center; gap:8px; margin:0 12px; padding:8px 10px;
+      border-radius:10px; background:var(--panel-2); border:1px solid var(--line); font-size:10px; color:var(--ink-2)}
+  .sh-wave{flex:1; display:flex; align-items:center; gap:2px; height:16px}
+  .sh-wave i{width:3px; border-radius:2px; background:var(--brand); display:block}
+  .sh-lead{display:flex; align-items:center; gap:9px; margin:8px 12px; padding:9px 10px;
+      border-radius:12px; background:var(--panel-2); border:1px solid var(--line)}
+  .sh-lead .co{color:var(--muted); font-size:9.5px}
+
   /* logos strip */
   .strip{padding:34px 0 8px; text-align:center; color:var(--muted); font-size:13.5px}
 
@@ -178,7 +225,6 @@
 <header>
   <div class="wrap hero">
     <div>
-      <span class="kicker">🎟 Built on a real show floor — battle-tested at LEAP Riyadh</span>
       <h1>Every handshake becomes a <em>researched, follow-up-ready</em> lead</h1>
       <p class="lede">Photograph the business card. Expodesk reads it, researches the person on the web,
         finds their LinkedIn and writes the brief — while you keep talking. Follow-up sent before
@@ -226,21 +272,91 @@
       <div class="step">
         <div class="no">1</div>
         <h3>Snap the card</h3>
-        <p>One photo — names, emails, phones, LinkedIn and country fill themselves in. Arabic, Cyrillic,
-           and messy design cards included. Add a face photo and a voice note while it reads.</p>
+        <p>One photo — name, emails, phones, LinkedIn and country fill themselves in. Any alphabet.</p>
       </div>
       <div class="step">
         <div class="no">2</div>
         <h3>AI does the homework</h3>
-        <p>Expodesk researches the person on the live web: every current role, the company's real market,
-           their LinkedIn profile — written up as a brief you read in twenty seconds.</p>
+        <p>Live-web research writes a twenty-second brief: who they are, what the company really does.</p>
       </div>
       <div class="step">
         <div class="no">3</div>
         <h3>Follow up before they forget you</h3>
-        <p>Intro email with your brochure, WhatsApp greeting, save-to-phone contact — one tap each.
-           Meeting reminders ping you 15 minutes ahead. Nothing slips.</p>
+        <p>Intro email, WhatsApp or Telegram greeting, save-to-phone — one tap each. Nothing slips.</p>
       </div>
+    </div>
+  </div>
+</section>
+
+<section id="screens" style="padding-top:0">
+  <div class="wrap">
+    <span class="sec-kicker">Inside the app</span>
+    <h2>What your team sees all week</h2>
+    <div class="shots">
+
+      <div>
+        <div class="shot-p"><div class="shot-s">
+          <div class="sh-top"><span class="sh-logo">expo<b>desk</b></span><span style="color:var(--muted)">🔔</span></div>
+          <div class="sh-event"><span><b>GITEX Global</b><br><span style="color:var(--ink-2)">Dubai · Stand B12</span></span><span style="color:var(--lanyard); font-weight:700">Day 2</span></div>
+          <div class="sh-tiles">
+            <div class="sh-tile"><div class="n">34</div><div class="l">Today</div></div>
+            <div class="sh-tile"><div class="n">128</div><div class="l">Total · target 150</div></div>
+            <div class="sh-tile"><div class="n" style="color:#ff7a7a">12</div><div class="l">🔥 Hot</div></div>
+            <div class="sh-tile"><div class="n" style="color:var(--lanyard)">5</div><div class="l">Follow-ups due</div></div>
+          </div>
+          <div class="sh-h">Leaderboard</div>
+          <div class="sh-row"><span class="sh-medal">🥇</span><span class="sh-name">Anna K.</span><span class="sh-cnt"><b>47</b> · 🔥 6</span></div>
+          <div class="sh-bar"><i style="width:100%"></i></div>
+          <div class="sh-row"><span class="sh-medal">🥈</span><span class="sh-name">Marco B.</span><span class="sh-cnt"><b>41</b> · 🔥 4</span></div>
+          <div class="sh-bar"><i style="width:87%"></i></div>
+          <div class="sh-row"><span class="sh-medal">🥉</span><span class="sh-name">You</span><span class="sh-cnt"><b>40</b> · 🔥 2</span></div>
+          <div class="sh-bar"><i style="width:85%"></i></div>
+        </div></div>
+        <div class="shot-cap">Live dashboard &amp; team leaderboard</div>
+      </div>
+
+      <div>
+        <div class="shot-p"><div class="shot-s">
+          <div class="sh-top"><span style="color:var(--muted)">← Leads</span><span class="sh-pill sh-hot">HOT</span></div>
+          <div class="sh-lead" style="background:transparent; border:none; margin-bottom:0">
+            <div class="sh-face" style="background:linear-gradient(135deg,#635bff,#9b8cff)">SC</div>
+            <div><div class="sh-name" style="font-size:12.5px">Sarah Chen</div>
+            <div class="co">CTO · TechFlow GmbH · 🇩🇪</div></div>
+          </div>
+          <div class="sh-acts">
+            <div class="sh-act wa">WhatsApp</div><div class="sh-act tg">Telegram</div>
+            <div class="sh-act">Intro email ✉</div><div class="sh-act">Save to phone</div>
+          </div>
+          <div class="sh-brief"><b>Who they are · AI research</b><br>
+            Ex-Siemens CTO driving TechFlow’s move into predictive maintenance.
+            Series B last year, ~120 people, expanding production partnerships…</div>
+          <div class="sh-voice">🎤 <div class="sh-wave">
+            <i style="height:6px"></i><i style="height:11px"></i><i style="height:15px"></i><i style="height:9px"></i><i style="height:13px"></i><i style="height:5px"></i><i style="height:10px"></i><i style="height:14px"></i><i style="height:7px"></i><i style="height:12px"></i><i style="height:8px"></i>
+          </div><span>“Wants a pilot for Hamburg plant…”</span></div>
+        </div></div>
+        <div class="shot-cap">Lead profile: AI brief, one-tap follow-up, voice notes</div>
+      </div>
+
+      <div>
+        <div class="shot-p"><div class="shot-s">
+          <div class="sh-top"><span class="sh-logo">Leads · 128</span><span style="color:var(--muted)">▤ ☰</span></div>
+          <div class="sh-lead"><div class="sh-face" style="background:linear-gradient(135deg,#ff8a5c,#ff5a8a)">OA</div>
+            <div style="flex:1"><div class="sh-name">Omar Al-Rashid</div><div class="co">Procurement · Gulf Dynamics · 🇸🇦</div></div>
+            <span class="sh-pill sh-warm">WARM</span></div>
+          <div class="sh-lead"><div class="sh-face" style="background:linear-gradient(135deg,#3ecf7a,#2aabee)">EP</div>
+            <div style="flex:1"><div class="sh-name">Elena Petrova</div><div class="co">CEO · Baltic Print · 🇱🇻</div></div>
+            <span class="sh-pill sh-cold">NEW</span></div>
+          <div class="sh-lead"><div class="sh-face" style="background:linear-gradient(135deg,#635bff,#9b8cff)">SC</div>
+            <div style="flex:1"><div class="sh-name">Sarah Chen</div><div class="co">CTO · TechFlow GmbH · 🇩🇪</div></div>
+            <span class="sh-pill sh-hot">HOT</span></div>
+          <div class="sh-lead"><div class="sh-face" style="background:linear-gradient(135deg,#ffd166,#ff8a5c)">JW</div>
+            <div style="flex:1"><div class="sh-name">James Wong</div><div class="co">Distributor · Pacific Trade · 🇸🇬</div></div>
+            <span class="sh-pill sh-warm">WARM</span></div>
+          <div class="sh-h" style="margin-top:10px">Captured offline · uploads when signal returns ✓</div>
+        </div></div>
+        <div class="shot-cap">Every lead filed, tagged and researched</div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -252,23 +368,23 @@
     <p class="sec-lede">Every feature exists because a real stand needed it at a real show.</p>
     <div class="grid">
       <div class="feat"><div class="ico">📇</div><h3>Card reader that actually reads</h3>
-        <p>AI vision handles multiple emails, several phones, any alphabet — with checkboxes to confirm what it found.</p></div>
+        <p>Multiple emails, several phones, any alphabet — confirmed with checkboxes.</p></div>
       <div class="feat"><div class="ico">🔍</div><h3>Deep lead research</h3>
-        <p>Live web search finds who they really are — serial founders, all their ventures, the company's actual industry.</p></div>
+        <p>Live web search finds who they really are and writes the brief.</p></div>
       <div class="feat"><div class="ico">🎤</div><h3>Voice notes → text</h3>
-        <p>Dictate impressions walking back to the stand. Transcribed automatically and filed into the lead's notes.</p></div>
+        <p>Dictate on the way back — transcribed and filed into the lead’s notes.</p></div>
       <div class="feat"><div class="ico">✉️</div><h3>One-tap follow-up</h3>
-        <p>Personalised intro email with your brochure attached, WhatsApp greeting, or straight into your phone contacts.</p></div>
+        <p>Brochure email, WhatsApp/Telegram/SMS greeting, save-to-phone.</p></div>
       <div class="feat"><div class="ico">👥</div><h3>Team lead-sharing</h3>
-        <p>Connect as a team and work one shared pipeline. Roles keep interns from deleting the CEO's hot lead.</p></div>
+        <p>One shared pipeline with roles — and a live leaderboard.</p></div>
       <div class="feat"><div class="ico">🗓</div><h3>Meeting schedule that reminds you</h3>
-        <p>Import the matchmaking-platform screenshot; get pinged 15 minutes before every slot.</p></div>
+        <p>Import a schedule screenshot; get pinged 15 minutes ahead.</p></div>
       <div class="feat"><div class="ico">🎫</div><h3>Your QR wallet</h3>
-        <p>Entrance badge, personal contact QR others scan to save you, parking passes — one swipe away all week.</p></div>
+        <p>Badge, personal contact QR and passes — one swipe away.</p></div>
       <div class="feat"><div class="ico">📊</div><h3>Live dashboard</h3>
-        <p>Leads captured today, team leaderboard, follow-ups due — even live visitors on your own website.</p></div>
+        <p>Today’s captures, leaderboard, follow-ups due — at a glance.</p></div>
       <div class="feat"><div class="ico">📤</div><h3>CSV export</h3>
-        <p>Clean, CRM-ready exports with every field — emails, LinkedIn profiles, countries, notes, consent trail.</p></div>
+        <p>CRM-ready export with every field and the consent trail.</p></div>
     </div>
   </div>
 </section>
