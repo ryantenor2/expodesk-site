@@ -2,6 +2,13 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NKR8L6QS');</script>
+<!-- End Google Tag Manager -->
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Expodesk — every handshake becomes a lead</title>
 <meta name="description" content="Expodesk turns a business card into a researched, follow-up-ready lead in 30 seconds — even with no signal on the show floor. Built by exhibitors, for exhibitors.">
@@ -208,6 +215,10 @@
 </style>
 </head>
 <body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NKR8L6QS"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
 
 <nav>
   <div class="wrap nav-in">
@@ -507,5 +518,21 @@
   </div>
 </footer>
 
+<script>
+document.addEventListener('click', function (e) {
+  var a = e.target.closest('a[href]');
+  if (!a) return;
+  var href = a.getAttribute('href') || '';
+  if (href.indexOf('app.expodesk.app') !== -1) {
+    var dest = href.indexOf('/register') !== -1 ? 'register'
+      : href.indexOf('/login') !== -1 ? 'login' : 'other';
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'cta_click', cta_destination: dest, cta_text: (a.textContent || '').trim().slice(0, 60) });
+  } else if (href.indexOf('mailto:') === 0) {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ event: 'contact_click', contact_method: 'email' });
+  }
+});
+</script>
 </body>
 </html>
