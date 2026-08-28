@@ -415,6 +415,74 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   </div>
 </section>
 
+<section id="install" style="padding-top:0">
+  <div class="wrap" style="display:flex; gap:36px; align-items:center; flex-wrap:wrap; justify-content:center">
+    <div style="flex:0 0 auto">
+      <style>
+      @keyframes edTapShare { 0%,14% {transform:scale(1)} 17% {transform:scale(1.4)} 20%,100% {transform:scale(1)} }
+      @keyframes edSheet { 0%,18% {transform:translateY(105%)} 24%,58% {transform:translateY(0)} 64%,100% {transform:translateY(105%)} }
+      @keyframes edRowGlow { 0%,30% {background:transparent} 38%,52% {background:#211f3a} 60%,100% {background:transparent} }
+      @keyframes edHomeShow { 0%,62% {opacity:0} 68%,94% {opacity:1} 100% {opacity:0} }
+      @keyframes edIconPop { 0%,66% {transform:scale(0); opacity:0} 72% {transform:scale(1.15); opacity:1} 76%,94% {transform:scale(1); opacity:1} 100% {opacity:0} }
+      </style>
+      <div style="width:200px; height:400px; background:#000; border:5px solid #26263a; border-radius:30px; position:relative; overflow:hidden">
+        <div style="position:absolute; inset:0; background:#0d0d15">
+          <div style="height:17px"></div>
+          <div style="padding:10px 12px; display:flex; align-items:center; gap:6px">
+            <span style="color:#f2f2f7; font-weight:650; font-size:11.5px">expo<span style="color:#8f88ff">desk</span></span>
+            <span style="margin-left:auto; font-size:7.5px; padding:2px 6px; border-radius:10px; background:#211f3a; color:#8f88ff">✨ 300</span>
+          </div>
+          <div style="margin:4px 10px; height:48px; background:#15151f; border-radius:9px"></div>
+          <div style="margin:6px 10px; height:48px; background:#15151f; border-radius:9px"></div>
+          <div style="margin:6px 10px; height:48px; background:#15151f; border-radius:9px"></div>
+          <div style="position:absolute; left:0; right:0; bottom:0; height:42px; background:#1b1b26; border-top:1px solid #26263a; display:flex; align-items:center; justify-content:space-around; color:#9494a8; font-size:15px">
+            <span>‹</span><span>›</span>
+            <span style="display:inline-block; animation:edTapShare 8s infinite; color:#4f9cf7; font-size:16px">⎋</span>
+            <span>▢</span><span>≡</span>
+          </div>
+        </div>
+        <div style="position:absolute; left:0; right:0; bottom:0; height:62%; background:#1b1b26; border-radius:13px 13px 0 0; transform:translateY(105%); animation:edSheet 8s infinite; padding:10px 10px 0">
+          <div style="width:32px; height:4px; background:#3a3a4c; border-radius:2px; margin:0 auto 10px"></div>
+          <div style="display:flex; align-items:center; gap:8px; padding:7px 8px; border-radius:8px; color:#c9c9d6; font-size:10px">🔗 Copy Link</div>
+          <div style="display:flex; align-items:center; gap:8px; padding:7px 8px; border-radius:8px; color:#c9c9d6; font-size:10px">🔖 Add Bookmark</div>
+          <div style="display:flex; align-items:center; gap:8px; padding:7px 8px; border-radius:8px; color:#f2f2f7; font-size:10px; font-weight:650; animation:edRowGlow 8s infinite; border:1px solid #635bff">
+            <span style="display:inline-flex; width:14px; height:14px; border:1.4px solid #8f88ff; border-radius:4px; align-items:center; justify-content:center; color:#8f88ff; font-size:9.5px">+</span>
+            Add to Home Screen
+          </div>
+          <div style="display:flex; align-items:center; gap:8px; padding:7px 8px; border-radius:8px; color:#c9c9d6; font-size:10px">🖨 Print</div>
+        </div>
+        <div style="position:absolute; inset:0; background:#0d0d15; opacity:0; animation:edHomeShow 8s infinite">
+          <div style="height:25px"></div>
+          <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:9px; padding:12px">
+            <div style="height:32px; background:#1e2735; border-radius:9px"></div>
+            <div style="height:32px; background:#252030; border-radius:9px"></div>
+            <div style="height:32px; background:#20301f; border-radius:9px"></div>
+            <div style="height:32px; background:#302020; border-radius:9px"></div>
+            <div style="height:32px; background:#242433; border-radius:9px"></div>
+            <div style="height:32px; background:#1f2c31; border-radius:9px"></div>
+            <div style="height:32px; background:#2c2a1e; border-radius:9px"></div>
+            <div style="text-align:center; animation:edIconPop 8s infinite">
+              <div style="width:32px; height:32px; margin:0 auto; background:#635bff; border-radius:9px; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:16px">e</div>
+              <div style="color:#c9c9d6; font-size:7px; margin-top:2px">Expodesk</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="flex:1; min-width:260px; max-width:440px">
+      <h2 style="margin-top:0">Installs like an app.<br>No app store in the way.</h2>
+      <p style="color:var(--ink-2, #c8bdb8)">Expodesk is a full app that lives on your home screen — icon, offline mode,
+         camera, the lot. Ten seconds to install, updates arrive by themselves.</p>
+      <ol style="color:var(--ink-2, #c8bdb8); padding-left:20px; line-height:1.9; margin:14px 0">
+        <li>Open <strong>app.expodesk.app</strong> on your phone</li>
+        <li>iPhone: tap <strong>Share ⎋ → Add to Home Screen</strong> · Android: tap <strong>Install</strong></li>
+        <li>Done — it's on your home screen like any other app</li>
+      </ol>
+      <a class="btn" href="https://app.expodesk.app/register">Try it on your phone — free</a>
+    </div>
+  </div>
+</section>
+
 <section id="pricing" style="padding-top:0">
   <div class="wrap">
     <span class="sec-kicker">Pricing</span>
