@@ -418,78 +418,10 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <section id="install" style="padding-top:0">
   <div class="wrap" style="display:flex; gap:36px; align-items:center; flex-wrap:wrap; justify-content:center">
     <div style="flex:0 0 auto">
-      <style>
-      @keyframes edTapShare { 0%,5% {transform:scale(1)} 8% {transform:scale(1.4)} 11%,100% {transform:scale(1)} }
-      @keyframes edSheet1 { 0%,10% {transform:translateY(105%)} 15%,30% {transform:translateY(0)} 35%,100% {transform:translateY(105%)} }
-      @keyframes edMoreGlow { 0%,17% {background:#2c2c3d} 21%,29% {background:#211f3a; outline:1px solid #635bff} 33%,100% {background:#2c2c3d} }
-      @keyframes edSheet2 { 0%,33% {opacity:0; transform:translateY(30px)} 38%,58% {opacity:1; transform:translateY(0)} 63%,100% {opacity:0; transform:translateY(30px)} }
-      @keyframes edRowGlow { 0%,42% {background:transparent} 47%,57% {background:#211f3a} 63%,100% {background:transparent} }
-      @keyframes edHomeShow { 0%,64% {opacity:0} 69%,95% {opacity:1} 100% {opacity:0} }
-      @keyframes edIconPop { 0%,68% {transform:scale(0); opacity:0} 74% {transform:scale(1.15); opacity:1} 78%,95% {transform:scale(1); opacity:1} 100% {opacity:0} }
-      </style>
-      <div style="width:200px; height:400px; background:#000; border:5px solid #26263a; border-radius:30px; position:relative; overflow:hidden">
-        <div style="position:absolute; inset:0; background:#0d0d15">
-          <div style="height:17px"></div>
-          <div style="padding:10px 12px; display:flex; align-items:center; gap:6px">
-            <span style="color:#f2f2f7; font-weight:650; font-size:11.5px">expo<span style="color:#8f88ff">desk</span></span>
-            <span style="margin-left:auto; font-size:7.5px; padding:2px 6px; border-radius:10px; background:#211f3a; color:#8f88ff">✨ 300</span>
-          </div>
-          <div style="margin:4px 10px; height:48px; background:#15151f; border-radius:9px"></div>
-          <div style="margin:6px 10px; height:48px; background:#15151f; border-radius:9px"></div>
-          <div style="margin:6px 10px; height:48px; background:#15151f; border-radius:9px"></div>
-          <div style="position:absolute; left:0; right:0; bottom:0; height:42px; background:#1b1b26; border-top:1px solid #26263a; display:flex; align-items:center; justify-content:space-around; color:#9494a8; font-size:15px">
-            <span>‹</span><span>›</span>
-            <span style="display:inline-block; animation:edTapShare 10s infinite"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="#4f9cf7" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" style="vertical-align:middle"><path d="M12 3v12"/><path d="M8 7l4-4 4 4"/><path d="M5 12v7a1 1 0 001 1h12a1 1 0 001-1v-7"/></svg></span>
-            <span>▢</span><span>≡</span>
-          </div>
-        </div>
-        <div style="position:absolute; left:0; right:0; bottom:0; height:58%; background:#16161f; border-radius:13px 13px 0 0; transform:translateY(105%); animation:edSheet1 10s infinite; padding:11px 11px 0">
-          <div style="text-align:left; color:#f2f2f7; font-size:10px; font-weight:650; padding:2px 2px 8px">Today &middot; Expodesk<br><span style="color:#8a8a9e; font-weight:400; font-size:8.5px">app.expodesk.app</span></div>
-          <div style="display:flex; gap:8px; padding:2px 0 10px; border-bottom:1px solid #26263a">
-            <div style="width:28px; height:28px; border-radius:8px; background:#2f6fd8"></div>
-            <div style="width:28px; height:28px; border-radius:8px; background:#2ba3e0"></div>
-            <div style="width:28px; height:28px; border-radius:8px; background:#37c05f"></div>
-            <div style="width:28px; height:28px; border-radius:8px; background:#d8483b"></div>
-          </div>
-          <div style="display:flex; gap:6px; padding-top:11px; justify-content:space-between">
-            <div style="text-align:center; flex:1"><div style="width:28px; height:28px; margin:0 auto; border-radius:50%; background:#2c2c3d"></div><div style="color:#9494a8; font-size:7px; margin-top:3px">Copy</div></div>
-            <div style="text-align:center; flex:1"><div style="width:28px; height:28px; margin:0 auto; border-radius:50%; background:#2c2c3d"></div><div style="color:#9494a8; font-size:7px; margin-top:3px">Send</div></div>
-            <div style="text-align:center; flex:1"><div style="width:28px; height:28px; margin:0 auto; border-radius:50%; background:#2c2c3d"></div><div style="color:#9494a8; font-size:7px; margin-top:3px">Reading List</div></div>
-            <div style="text-align:center; flex:1"><div style="width:28px; height:28px; margin:0 auto; border-radius:50%; display:flex; align-items:center; justify-content:center; color:#f2f2f7; font-size:12px; animation:edMoreGlow 10s infinite">⌄</div><div style="color:#c9c9d6; font-size:7px; margin-top:3px; font-weight:650">View More</div></div>
-          </div>
-        </div>
-        <div style="position:absolute; left:0; right:0; bottom:0; height:72%; background:#16161f; border-radius:13px 13px 0 0; opacity:0; animation:edSheet2 10s infinite; padding:11px 10px 0">
-          <div style="background:#23232f; border-radius:9px; padding:2px 0; margin-bottom:9px">
-            <div style="padding:6px 9px; color:#c9c9d6; font-size:9.5px; text-align:left; border-bottom:1px solid #2c2c3d">☆ Add to Bookmarks</div>
-            <div style="padding:6px 9px; color:#c9c9d6; font-size:9.5px; text-align:left; border-bottom:1px solid #2c2c3d">▣ Create a QR Code</div>
-            <div style="padding:6px 9px; color:#c9c9d6; font-size:9.5px; text-align:left">🔍 Find in Page</div>
-          </div>
-          <div style="background:#23232f; border-radius:9px; padding:2px 0">
-            <div style="padding:7px 9px; color:#f2f2f7; font-size:10px; font-weight:650; animation:edRowGlow 10s infinite; border:1px solid #635bff; border-radius:7px; text-align:left; display:flex; align-items:center; gap:7px">
-              <span style="display:inline-flex; width:14px; height:14px; border:1.4px solid #8f88ff; border-radius:4px; align-items:center; justify-content:center; color:#8f88ff; font-size:9px">+</span>
-              Add to Home Screen
-            </div>
-            <div style="padding:6px 9px; color:#c9c9d6; font-size:9.5px; text-align:left; border-top:1px solid #2c2c3d">📝 Add to New Quick Note</div>
-            <div style="padding:6px 9px; color:#c9c9d6; font-size:9.5px; text-align:left; border-top:1px solid #2c2c3d">🎯 Add to Focus</div>
-          </div>
-        </div>
-        <div style="position:absolute; inset:0; background:#0d0d15; opacity:0; animation:edHomeShow 10s infinite">
-          <div style="height:25px"></div>
-          <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:9px; padding:12px">
-            <div style="height:32px; background:#1e2735; border-radius:9px"></div>
-            <div style="height:32px; background:#252030; border-radius:9px"></div>
-            <div style="height:32px; background:#20301f; border-radius:9px"></div>
-            <div style="height:32px; background:#302020; border-radius:9px"></div>
-            <div style="height:32px; background:#242433; border-radius:9px"></div>
-            <div style="height:32px; background:#1f2c31; border-radius:9px"></div>
-            <div style="height:32px; background:#2c2a1e; border-radius:9px"></div>
-            <div style="text-align:center; animation:edIconPop 10s infinite">
-              <div style="width:32px; height:32px; margin:0 auto; background:#635bff; border-radius:9px; display:flex; align-items:center; justify-content:center; color:#fff; font-weight:700; font-size:16px">e</div>
-              <div style="color:#c9c9d6; font-size:7px; margin-top:2px">Expodesk</div>
-            </div>
-          </div>
-        </div>
-      </div>
+      <video src="install-demo.mp4" poster="install-poster.jpg" autoplay muted loop playsinline
+             preload="metadata" aria-label="How to install Expodesk on an iPhone"
+             style="width:210px; display:block; border-radius:30px; border:5px solid #26263a; background:#000"></video>
+      <p style="text-align:center; color:var(--muted); font-size:12px; margin:8px 0 0">Real recording &middot; 10 seconds</p>
     </div>
     <div style="flex:1; min-width:260px; max-width:440px">
       <h2 style="margin-top:0">Installs like an app.<br>No app store in the way.</h2>
@@ -586,7 +518,11 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
          research about 25. Plans include an allowance; top-ups are transparent, no subscriptions hidden
          inside subscriptions.</p>
     </details>
-  </div>
+    <details>
+      <summary>How do I install it on my phone?</summary>
+      <p>Open <strong>app.expodesk.app</strong>, then: iPhone &mdash; Share &rarr; View More &rarr; Add to Home Screen; Android &mdash; menu &#8942; &rarr; Add to Home screen. Ten seconds, no app store. <a href="#install">Watch the 10-second video</a>.</p>
+    </details>
+</div>
 </section>
 
 <div class="final wrap">
